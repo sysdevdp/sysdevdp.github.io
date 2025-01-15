@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../public/image2vector.svg" type="image/x-icon">
     <title>Repository</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons/css/unicons.css" />
+    <!-- Include Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">    
     <style>
       body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f7fc;
-        color: #333;
+        font-family: 'IBM Plex Mono', monospace;
+        background-color: #1e1e1e;
+                color: #333;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 0;
         padding: 20px;
         gap: 20px;
+        position: relative;  
       }
+      .home-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 15px;
+        color: #ffffff;
+        height: 10px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        z-index: 100;  
+      }
+      .home-icon:hover {
+        color: #0073e6;
+      }
+
       .section {
         background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(230,230,230,1) 100%);
         padding: 20px;
@@ -26,10 +44,11 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         width: 300px;
         font-size: 14px;
+        margin-top: 50px; /* Add margin to sections */
         transition: transform 0.3s ease;
       }
       .section:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
       }
       .section.easy {
         border-top: 8px solid #4CAF50;
@@ -69,6 +88,10 @@
     </style>
   </head>
   <body>
+    <a href="/" class="home-icon">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div class="section easy" id="easy-section">
       <div class="section-title">Easy LeetCode Problems</div>
       <div class="file-structure" id="easy-structure"></div>
