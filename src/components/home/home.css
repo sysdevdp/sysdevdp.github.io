@@ -19,7 +19,7 @@
     margin-bottom: 1.5rem;
     background-repeat: no-repeat;
     width: 200px;
-    height: 220px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     border: solid 3px rgba(0, 0, 0, 0.5);
@@ -27,8 +27,17 @@
     order: 1;
     justify-self: center;
     animation: profile__animate 8s ease-in-out infinite 0s;
+
+    filter: grayscale(100%);
+}
+.home__img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
 }
 
+.home__img:hover {
+    filter: grayscale(0%);
+}
 @keyframes profile__animate {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
