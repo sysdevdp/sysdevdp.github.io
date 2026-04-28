@@ -26,12 +26,16 @@ const App = () => {
       <Sidebar />
       <main className="main">
         <Home />
-        <About />
+      
+        {/*
+         <About />
         <Services />
-        <Qualification />
+            <Qualification />
         <Portfolio />
         <Blog />
-        <Footer />
+          <Footer />
+              */}
+    
 
       </main>
 
