@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './home.css';
-import Me from "../../assets/pfp2.jpg";
+import Me from "../../assets/pfp2.png";
 import HeaderSocials from './HeaderSocials';
 import ScrollDown from './ScrollDown';
 import Typed from 'typed.js';
