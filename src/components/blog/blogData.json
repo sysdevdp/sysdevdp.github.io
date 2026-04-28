@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "category": "AI",
+      "title": "Neural Networks",
+      "image": "Image1",
+      "date": "15 March, 2023",
+      "author": "Deepak"
+    },
+    {
+      "id": 2,
+      "category": "Software Engineering",
+      "title": "Best Software Engineering Models",
+      "image": "Image2",
+      "date": "10 April, 2023",
+      "author": "Deepak"
+    },
+    {
+      "id": 3,
+      "category": "AI",
+      "title": "The Rise of GPT Models",
+      "image": "Image3",
+      "date": "20 May, 2023",
+      "author": "Deepak"
+    }
+  ]
+  

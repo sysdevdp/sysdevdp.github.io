@@ -4,12 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-runbash.ps1
+git rm --cached runbash.ps1
 # testing
 /coverage
 
-
-/src
 
 # production
 /build

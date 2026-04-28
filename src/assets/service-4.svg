@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0 100 65" width="80" height="80">
+  <g transform="translate(0, -20)"> <!-- Shift the content up by 5 units -->
+    <!-- Desktop Monitor Body with transparent border -->
+    <rect x="5" y="10" width="90" height="60" rx="10" ry="10" fill="#2c3e50"/>
+    
+    <!-- Monitor Screen -->
+    <rect x="10" y="15" width="80" height="45" rx="5" ry="5" fill="#1e2a34"/>
+    
+    <!-- Code Inside Monitor -->
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="12" fill="#f39c12">&lt;div&gt;</text> <!-- Yellow color for <div> -->
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="12" fill="#3498db">&lt;/div&gt;</text> <!-- Blue color for </div> -->
+    
+    <!-- Cursor -->
+    <line x1="60" y1="45" x2="60" y2="45" stroke="#00d9b8" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Monitor Stand -->
+    <rect x="35" y="65" width="30" height="8" fill="#2c3e50"/>
+    <rect x="40" y="73" width="20" height="3" fill="#34495e"/>
+  </g>
+</svg>

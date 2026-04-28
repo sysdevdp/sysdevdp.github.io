@@ -1,0 +1,64 @@
+.footer {
+    padding: 40px 20px 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 1px;
+    background-color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Social icons on the left and copyright on the right */
+    width: a;
+    max-width: 1200px;
+    align-items: center; /* Vertically center the content */
+    gap: 40px; /* Reduce the space between social icons and copyright */
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    gap: 8px; /* Reduced gap between the icons */
+    align-items: flex-start; /* Align icons to the left */
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link i {
+    margin-right: 8px;
+}
+
+.footer-social-link:hover {
+    color: #ff6f61;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    align-items: flex-start; /* Align copyright text to the left */
+    color: var(--text-color);
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-copyright p {
+    margin: 0;
+}

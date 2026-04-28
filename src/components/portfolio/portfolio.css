@@ -1,0 +1,184 @@
+/* General Styling for Work Section */
+.work {
+    padding: 4rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Work Filters */
+.work__filters {
+    display: flex;
+    align-items: center;
+    column-gap: 1.275rem;
+    justify-content: center; /* Centers the filters horizontally */
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+}
+
+.work__item {
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    font-size: 1rem;
+    color: #fff;
+}
+
+.work__item:hover {
+    color: #678b22;
+}
+
+/* Grid Layout for Cards */
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+}
+
+/* Individual Work Card Styling */
+.work__card {
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Ensure content is contained inside card */
+    transition: transform 0.3s ease; /* Optional: Smooth zoom effect */
+}
+
+.work__card:hover {
+    transform: scale(1.05); /* Optional: Adds a zoom effect on hover */
+}
+
+/* Mask for Hover Effect */
+.work__mask {
+    background: #2b2b30;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.work__card:hover .work__mask {
+    opacity: 0.9; /* Make the mask visible on hover */
+}
+
+/* Thumbnail Image */
+.work__thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.work__img {
+    width: 100%;
+    height: auto;
+}
+
+/* Work Category Badge */
+.work__category {
+    color: #fff;
+    background-color: black;
+    border-bottom-left-radius: 0.98rem;
+    border-bottom-right-radius: 0.98rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    font-size: var(--small-font-size);
+    display: inline-block;
+    padding: 0.19rem 0.625rem;
+    transform: translateY(-40px);
+    transition: 0.3s;
+}
+
+/* Work Title */
+.work__title {
+    color: #fff;
+    font-size: var(--h3-font-size);
+    margin: 0 0 0.98rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: 3.75rem;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+}
+
+/* Work Button */
+.work__button {
+    color: #fff;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: var(--h3-font-size);
+    display: block;
+    background-color: #ffd15c;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Hover Effects */
+.work__card:hover .work__title,
+.work__card:hover .work__category,
+.work__card:hover .work__button {
+    opacity: 1;
+    transform: translateY(0); /* Make elements visible on hover */
+}
+
+/* Additional Styling for Work Card Hover Transitions */
+.work__card:hover .work__category {
+    opacity: 1;
+    transform: translateY(0); /* Show category on hover */
+}
+
+.work__card:hover .work__button {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .work__container {
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+
+    h3 {
+        font-size: 13px; /* Use px for better screen rendering */
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .work__container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+
+
+    .work__button{
+        height:40px;
+        width:40px;
+    }
+
+
+    
+
+}
