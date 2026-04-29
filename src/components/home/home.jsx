@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const options = {
       strings: [
-        "<span>Cloud</span><br/><span>Networking</span><br/><span>Software</span>"
+        "<span>SWE</span><br/><span>Cloud</span><br/><span>DevSecOps</span>"
       ],
       typeSpeed: 100,
       backSpeed: 100, 
