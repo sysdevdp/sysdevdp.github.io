@@ -1,0 +1,339 @@
+
+/* ================= BASE ================= */
+
+.about-new {
+    padding: 5rem 2rem;
+}
+
+/* required for layout stability */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+/* ================= VS CODE WINDOW ================= */
+
+.vscode-window {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 191, 255, 0.08);
+
+    position: relative;
+
+    transition: transform 0.05s linear;
+}
+
+/* glow overlay */
+.vscode-window::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at top left,
+        rgba(0, 191, 255, 0.08),
+        transparent 60%
+    );
+
+    pointer-events: none;
+}
+
+/* ================= DRAG SUPPORT ================= */
+
+.vscode-window.draggable {
+    user-select: none;
+}
+
+/* ================= TOP BAR ================= */
+
+.vscode-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    background: #2b2b2b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* drag handle */
+.drag-handle {
+    cursor: grab;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.filename {
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+/* ================= EDITOR ================= */
+
+.vscode-editor {
+    padding: 1.5rem;
+
+    font-family: "Fira Code", "SF Mono", monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    color: #d4d4d4;
+
+    overflow-x: auto;
+}
+
+.vscode-editor pre {
+    margin: 0;
+    white-space: pre;
+}
+
+.vscode-editor div:hover {
+    color: #00d4ff;
+    transform: translateX(4px);
+    transition: 0.15s ease;
+}
+
+/* ================= EXPANDED MODE ================= */
+
+.vscode-window.expanded {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 80vh;
+
+    margin: 2rem auto;
+
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.vscode-window.expanded .vscode-editor {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* ================= MINIMIZE ANIMATION ================= */
+
+.vscode-window.minimizing {
+    animation: minimizeToFolder 0.3s ease forwards;
+    transform-origin: center;
+}
+
+@keyframes minimizeToFolder {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: scale(0.85) translateY(40px);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(0.2) translateY(120px);
+        opacity: 0;
+    }
+}
+
+/* ================= OPEN ANIMATION ================= */
+
+.vscode-window.opening {
+    animation: openFromFolder 0.3s ease forwards;
+    transform-origin: center;
+}
+
+@keyframes openFromFolder {
+    0% {
+        transform: scale(0.2) translateY(120px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(0.85) translateY(40px);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ================= DOCK / FOLDER ================= */
+
+.dock {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.folder {
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+
+    color: #d4d4d4;
+    font-family: monospace;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 191, 255, 0.08);
+
+    transition: all 0.25s ease;
+
+    animation: folderPop 0.25s ease;
+}
+
+.folder:hover {
+    transform: translateY(-4px) scale(1.02);
+    color: #00d4ff;
+}
+
+@keyframes folderPop {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .about-new {
+        padding: 3rem 1rem;
+    }
+
+    .vscode-window {
+        max-width: 100%;
+        margin: 2rem auto 0 auto;
+        border-radius: 12px;
+    }
+
+    .vscode-topbar {
+        padding: 8px 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .filename {
+        font-size: 0.75rem;
+    }
+
+    .vscode-editor {
+        padding: 1rem;
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+    .vscode-editor div:hover {
+        transform: none;
+        color: #d4d4d4;
+    }
+
+    .vscode-window.expanded {
+        height: 85vh;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .folder {
+        width: 80%;
+        text-align: center;
+        padding: 0.9rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .folder:hover {
+        transform: none;
+    }
+
+    @keyframes minimizeToFolder {
+        0% {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        60% {
+            transform: scale(0.9) translateY(20px);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: scale(0.2) translateY(80px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes openFromFolder {
+        0% {
+            transform: scale(0.2) translateY(80px);
+            opacity: 0;
+        }
+
+        40% {
+            transform: scale(0.9) translateY(20px);
+            opacity: 0.6;
+        }
+
+        100% {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+    }
+}

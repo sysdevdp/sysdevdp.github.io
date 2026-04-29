@@ -12,7 +12,7 @@ import Wordle from './components/Wordle/wordle';
 import HamburgerMenu from './HamburgerMenu/hamburger';
 import Footer from './components/footer/Footer'
 import './App.css';
-
+import AboutNew from './components/about_new/about_new';
 const App = () => {
   const [showWordle, setShowWordle] = useState(false);
 
@@ -26,7 +26,7 @@ const App = () => {
       <Sidebar />
       <main className="main">
         <Home />
-      
+      <AboutNew />
         {/*
          <About />
         <Services />
@@ -40,7 +40,7 @@ const App = () => {
       </main>
 
       {/* Hamburger Menu */}
-      <HamburgerMenu onPlayWordle={handlePlayWordle} />
+      {/* <HamburgerMenu onPlayWordle={handlePlayWordle} /> */}
 
       {/* Wordle Game */}
       {showWordle && <Wordle onClose={() => setShowWordle(false)} />}
