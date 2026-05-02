@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "./about_new.css";
 
 const timelineData = [
-    { year: "2019", event: "Started College", detail: "Began IT studies." },
-    { year: "2021", event: "Home Lab", detail: "Built Linux + AWS environments." },
-    { year: "2023", event: "Graduated", detail: "Moved into cloud + full-stack." },
-    { year: "2024", event: "First Job", detail: "Systems/software engineering." },
-    { year: "2025", event: "Projects", detail: "React, Next.js, AWS apps." },
+    { year: "2023", event: "Graduated GMU", detail: "Graduated with a degree in Computer Science concentrating in Cloud" },
+    { year: "2025", event: "IT/System Administration Role", detail: "Filled the role of a System Administrator contracted for the DoJ" },
+    { year: "2026", event: "Software Engineer", detail: "Software engineer contracted for the DoD. Working on SaaS solutions." },
+    {year: "2026", event: "GenAI Project", detail: "Developing a GenAI solution."}
 ];
 
 export default function AboutNew() {
