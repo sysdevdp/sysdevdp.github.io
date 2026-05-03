@@ -77,8 +77,13 @@ const Home = () => {
 
 
         
-        <a href="#contact" className="btn">Contact</a>
-
+        <a
+  href="mailto:bcs.deepakkumar@gmail.com?subject=Reaching Out&body=Hi Deepak."
+  className="btn"
+>
+  Contact
+</a>
+        
         
         <ScrollDown />
       </div>
